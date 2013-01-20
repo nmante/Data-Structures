@@ -1,0 +1,128 @@
+\hypertarget{classStack}{\section{\-Stack \-Class \-Reference}
+\label{classStack}\index{\-Stack@{\-Stack}}
+}
+
+
+\-Interface for a simple \hyperlink{classStack}{\-Stack} class.  
+
+
+
+
+{\ttfamily \#include $<$\-Stack.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{\-Stack} ()
+\begin{DoxyCompactList}\small\item\em \-Default \hyperlink{classStack}{\-Stack} \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classStack_a40bd5dff912f0e5290777c4b46d17809}{$\sim$\-Stack} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classStack}{\-Stack} \-Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classStack_ad2d05ce55e7abd4a8d8ea1263be99675}{pop} ()
+\begin{DoxyCompactList}\small\item\em \-Function for removing a single stack node. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_acaf50a3a40fc274ee1392cce00b02979}{push} (int)
+\begin{DoxyCompactList}\small\item\em \-Push function for adding stack variables. \end{DoxyCompactList}\item 
+void \hyperlink{classStack_ad2d64a259a5e8abc098373148f30d9d4}{display} ()
+\begin{DoxyCompactList}\small\item\em \-A function to display the contents of the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{\-Node} $\ast$ \hyperlink{classStack_a953b2d23babaa0952c62a795b6e678fd}{top}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Interface for a simple \hyperlink{classStack}{\-Stack} class. 
+
+\-This is the interface for a simple stack class. \-The class utilizes the 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{\index{\-Stack@{\-Stack}!\-Stack@{\-Stack}}
+\index{\-Stack@{\-Stack}!Stack@{\-Stack}}
+\subsubsection[{\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stack\-::\-Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}
+
+
+\-Default \hyperlink{classStack}{\-Stack} \-Constructor. 
+
+\hypertarget{classStack_a40bd5dff912f0e5290777c4b46d17809}{\index{\-Stack@{\-Stack}!$\sim$\-Stack@{$\sim$\-Stack}}
+\index{$\sim$\-Stack@{$\sim$\-Stack}!Stack@{\-Stack}}
+\subsubsection[{$\sim$\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Stack\-::$\sim$\-Stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStack_a40bd5dff912f0e5290777c4b46d17809}
+
+
+\hyperlink{classStack}{\-Stack} \-Destructor. 
+
+\-Need to remove each element one by one. \-The only pointer maintained is the top \hyperlink{classNode}{\-Node}. \-Must delete top variable, while keeping track of next node so that we don't lose our stack. \-This can be done by calling our pop function in a while loop.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classStack_ad2d05ce55e7abd4a8d8ea1263be99675}{\-Stack\-::pop()} 
+\end{DoxySeeAlso}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classStack_ad2d64a259a5e8abc098373148f30d9d4}{\index{\-Stack@{\-Stack}!display@{display}}
+\index{display@{display}!Stack@{\-Stack}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stack\-::display} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStack_ad2d64a259a5e8abc098373148f30d9d4}
+
+
+\-A function to display the contents of the stack. 
+
+\-This function iterates over and prints each node in the stack. \-The first node printed is the top \hyperlink{classNode}{\-Node}. \hypertarget{classStack_ad2d05ce55e7abd4a8d8ea1263be99675}{\index{\-Stack@{\-Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{\-Stack}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stack\-::pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classStack_ad2d05ce55e7abd4a8d8ea1263be99675}
+
+
+\-Function for removing a single stack node. 
+
+\-The \hyperlink{classStack_ad2d05ce55e7abd4a8d8ea1263be99675}{\-Stack\-::pop()} function removes the most recently added node on the stack. \-It also simultaneously updates the pointer to the top of the stack.
+
+\begin{DoxyReturn}{\-Returns}
+\-The data from the removed node. 
+\end{DoxyReturn}
+\hypertarget{classStack_acaf50a3a40fc274ee1392cce00b02979}{\index{\-Stack@{\-Stack}!push@{push}}
+\index{push@{push}!Stack@{\-Stack}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stack\-::push} (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{classStack_acaf50a3a40fc274ee1392cce00b02979}
+
+
+\-Push function for adding stack variables. 
+
+\-The push function adds a new stack node to the top of the stack.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to top of stack. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classStack_acaf50a3a40fc274ee1392cce00b02979}{\-Stack\-::push()} is returned from immediately. 
+\end{DoxyNote}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classStack_a953b2d23babaa0952c62a795b6e678fd}{\index{\-Stack@{\-Stack}!top@{top}}
+\index{top@{top}!Stack@{\-Stack}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Stack\-::top}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classStack_a953b2d23babaa0952c62a795b6e678fd}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Stack/include/\hyperlink{Stack_8hpp}{\-Stack.\-hpp}\item 
+\-Stack/src/\hyperlink{Stack_8cpp}{\-Stack.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,243 @@
+\hypertarget{classLinkedList}{\section{\-Linked\-List \-Class \-Reference}
+\label{classLinkedList}\index{\-Linked\-List@{\-Linked\-List}}
+}
+
+
+\-Interface for a simple \hyperlink{classLinkedList}{\-Linked\-List} class.  
+
+
+
+
+{\ttfamily \#include $<$\-Linked\-List.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}{\-Linked\-List} ()
+\begin{DoxyCompactList}\small\item\em \-Default \hyperlink{classLinkedList}{\-Linked\-List} \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}{$\sim$\-Linked\-List} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classLinkedList}{\-Linked\-List} \-Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classLinkedList_abd89fecfe1ce695b67aaab606d0e3cbc}{remove\-Head} ()
+\begin{DoxyCompactList}\small\item\em \-Function for removing a single \hyperlink{classLinkedList}{\-Linked\-List} node. \end{DoxyCompactList}\item 
+void \hyperlink{classLinkedList_aa2cb7130bb274bf5df407dead583d06a}{append} (int data)
+\begin{DoxyCompactList}\small\item\em append function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables to the end of the list \end{DoxyCompactList}\item 
+void \hyperlink{classLinkedList_a34503bbeac8d430640b67834585c9e4c}{prepend} (int data)
+\begin{DoxyCompactList}\small\item\em prepend function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables to the beginning of the list \end{DoxyCompactList}\item 
+void \hyperlink{classLinkedList_ae0561e6eaac19fbb49a8b53dd4f30268}{insert\-After} (int exist\-Data, int new\-Data)
+\begin{DoxyCompactList}\small\item\em insert\-After function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables after a specific node \end{DoxyCompactList}\item 
+int \hyperlink{classLinkedList_aed09432b5dbd8584e2d9e851f3238e47}{remove\-Tail} ()
+\begin{DoxyCompactList}\small\item\em remove\-Tail function for deleting the tail element of \hyperlink{classLinkedList}{\-Linked\-List} \end{DoxyCompactList}\item 
+void \hyperlink{classLinkedList_ab8082d50a0ac0eb1e8cc019b125fe223}{insert\-At\-Index} (int index, int new\-Data)
+\begin{DoxyCompactList}\small\item\em insert\-At\-Index function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables after a specific node \end{DoxyCompactList}\item 
+void \hyperlink{classLinkedList_af02eaa3695918e657f639996eae613c5}{display} ()
+\begin{DoxyCompactList}\small\item\em \-A function to display the contents of the \hyperlink{classLinkedList}{\-Linked\-List}. \end{DoxyCompactList}\item 
+int \hyperlink{classLinkedList_a92bb5271734b51ab089d75bf52aee919}{get\-Length} ()
+\begin{DoxyCompactList}\small\item\em \-A function to return the {\bfseries length} of the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{\-Node} $\ast$ \hyperlink{classLinkedList_a3b496be2ca8046e2a806f6e2eab33d9b}{head}
+\item 
+\hyperlink{classNode}{\-Node} $\ast$ \hyperlink{classLinkedList_a6ee7e26362fba74cdec9d4806ded2a21}{tail}
+\item 
+int \hyperlink{classLinkedList_a0ee3b52ce8c1297315a78a59de6aba24}{length}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Interface for a simple \hyperlink{classLinkedList}{\-Linked\-List} class. 
+
+\-This is the interface for a simple linked list class. \-The class utilizes the 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}{\index{\-Linked\-List@{\-Linked\-List}!\-Linked\-List@{\-Linked\-List}}
+\index{\-Linked\-List@{\-Linked\-List}!LinkedList@{\-Linked\-List}}
+\subsubsection[{\-Linked\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linked\-List\-::\-Linked\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_afe7f78983e173f8018927cf2ad11a5aa}
+
+
+\-Default \hyperlink{classLinkedList}{\-Linked\-List} \-Constructor. 
+
+\hypertarget{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}{\index{\-Linked\-List@{\-Linked\-List}!$\sim$\-Linked\-List@{$\sim$\-Linked\-List}}
+\index{$\sim$\-Linked\-List@{$\sim$\-Linked\-List}!LinkedList@{\-Linked\-List}}
+\subsubsection[{$\sim$\-Linked\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linked\-List\-::$\sim$\-Linked\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_a35811ed58ff0d8d9cc9b309b8d8f5111}
+
+
+\hyperlink{classLinkedList}{\-Linked\-List} \-Destructor. 
+
+\-Need to remove each element one by one. \-There are two pointers maintained, the head \hyperlink{classNode}{\-Node} and the tail \hyperlink{classNode}{\-Node}. \-Must delete from head variable, while keeping track of next node so that we don't lose our \hyperlink{classLinkedList}{\-Linked\-List}. \-This can be done by calling our del function in a while loop.
+
+\begin{DoxySeeAlso}{\-See also}
+\-Linked\-List\-::del() 
+\end{DoxySeeAlso}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classLinkedList_aa2cb7130bb274bf5df407dead583d06a}{\index{\-Linked\-List@{\-Linked\-List}!append@{append}}
+\index{append@{append}!LinkedList@{\-Linked\-List}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Linked\-List\-::append} (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_aa2cb7130bb274bf5df407dead583d06a}
+
+
+append function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables to the end of the list 
+
+\-The append function adds a new \hyperlink{classLinkedList}{\-Linked\-List} node to the end of the \hyperlink{classLinkedList}{\-Linked\-List}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to tail of \hyperlink{classLinkedList}{\-Linked\-List}. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classLinkedList_a34503bbeac8d430640b67834585c9e4c}{\-Linked\-List\-::prepend()} is returned from immediately. 
+\end{DoxyNote}
+\hypertarget{classLinkedList_af02eaa3695918e657f639996eae613c5}{\index{\-Linked\-List@{\-Linked\-List}!display@{display}}
+\index{display@{display}!LinkedList@{\-Linked\-List}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Linked\-List\-::display} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_af02eaa3695918e657f639996eae613c5}
+
+
+\-A function to display the contents of the \hyperlink{classLinkedList}{\-Linked\-List}. 
+
+\-This function iterates over and prints each node in the \hyperlink{classLinkedList}{\-Linked\-List}. \-The first node printed is the top \hyperlink{classNode}{\-Node}. \hypertarget{classLinkedList_a92bb5271734b51ab089d75bf52aee919}{\index{\-Linked\-List@{\-Linked\-List}!get\-Length@{get\-Length}}
+\index{get\-Length@{get\-Length}!LinkedList@{\-Linked\-List}}
+\subsubsection[{get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Linked\-List\-::get\-Length} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classLinkedList_a92bb5271734b51ab089d75bf52aee919}
+
+
+\-A function to return the {\bfseries length} of the list. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The length of the \-Linked \-List. 
+\end{DoxyReturn}
+\hypertarget{classLinkedList_ae0561e6eaac19fbb49a8b53dd4f30268}{\index{\-Linked\-List@{\-Linked\-List}!insert\-After@{insert\-After}}
+\index{insert\-After@{insert\-After}!LinkedList@{\-Linked\-List}}
+\subsubsection[{insert\-After}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Linked\-List\-::insert\-After} (
+\begin{DoxyParamCaption}
+\item[{int}]{exist\-Data, }
+\item[{int}]{new\-Data}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_ae0561e6eaac19fbb49a8b53dd4f30268}
+
+
+insert\-After function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables after a specific node 
+
+\-The insert\-After function adds a new \hyperlink{classLinkedList}{\-Linked\-List} node after the node with the specified data of the \hyperlink{classLinkedList}{\-Linked\-List}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to head of \hyperlink{classLinkedList}{\-Linked\-List}. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classLinkedList_ae0561e6eaac19fbb49a8b53dd4f30268}{\-Linked\-List\-::insert\-After()} is returned from immediately. 
+\end{DoxyNote}
+\hypertarget{classLinkedList_ab8082d50a0ac0eb1e8cc019b125fe223}{\index{\-Linked\-List@{\-Linked\-List}!insert\-At\-Index@{insert\-At\-Index}}
+\index{insert\-At\-Index@{insert\-At\-Index}!LinkedList@{\-Linked\-List}}
+\subsubsection[{insert\-At\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Linked\-List\-::insert\-At\-Index} (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{int}]{new\-Data}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_ab8082d50a0ac0eb1e8cc019b125fe223}
+
+
+insert\-At\-Index function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables after a specific node 
+
+\-The insert\-After function adds a new \hyperlink{classLinkedList}{\-Linked\-List} node with {\bfseries new\-Data} after the node with the specified {\bfseries index} of the \hyperlink{classLinkedList}{\-Linked\-List}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to head of \hyperlink{classLinkedList}{\-Linked\-List}. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classLinkedList_ae0561e6eaac19fbb49a8b53dd4f30268}{\-Linked\-List\-::insert\-After()} is returned from immediately. 
+\end{DoxyNote}
+\hypertarget{classLinkedList_a34503bbeac8d430640b67834585c9e4c}{\index{\-Linked\-List@{\-Linked\-List}!prepend@{prepend}}
+\index{prepend@{prepend}!LinkedList@{\-Linked\-List}}
+\subsubsection[{prepend}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Linked\-List\-::prepend} (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_a34503bbeac8d430640b67834585c9e4c}
+
+
+prepend function for adding \hyperlink{classLinkedList}{\-Linked\-List} variables to the beginning of the list 
+
+\-The prepend function adds a new \hyperlink{classLinkedList}{\-Linked\-List} node to the beginning of the \hyperlink{classLinkedList}{\-Linked\-List}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to head of \hyperlink{classLinkedList}{\-Linked\-List}. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classLinkedList_a34503bbeac8d430640b67834585c9e4c}{\-Linked\-List\-::prepend()} is returned from immediately. 
+\end{DoxyNote}
+\hypertarget{classLinkedList_abd89fecfe1ce695b67aaab606d0e3cbc}{\index{\-Linked\-List@{\-Linked\-List}!remove\-Head@{remove\-Head}}
+\index{remove\-Head@{remove\-Head}!LinkedList@{\-Linked\-List}}
+\subsubsection[{remove\-Head}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Linked\-List\-::remove\-Head} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_abd89fecfe1ce695b67aaab606d0e3cbc}
+
+
+\-Function for removing a single \hyperlink{classLinkedList}{\-Linked\-List} node. 
+
+\-The \hyperlink{classLinkedList_abd89fecfe1ce695b67aaab606d0e3cbc}{\-Linked\-List\-::remove\-Head()} function removes the least recently added node on the \hyperlink{classLinkedList}{\-Linked\-List}. \-It also simultaneously updates the pointer to the head and tail of the \hyperlink{classLinkedList}{\-Linked\-List}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The data from the removed node. 
+\end{DoxyReturn}
+\hypertarget{classLinkedList_aed09432b5dbd8584e2d9e851f3238e47}{\index{\-Linked\-List@{\-Linked\-List}!remove\-Tail@{remove\-Tail}}
+\index{remove\-Tail@{remove\-Tail}!LinkedList@{\-Linked\-List}}
+\subsubsection[{remove\-Tail}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Linked\-List\-::remove\-Tail} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLinkedList_aed09432b5dbd8584e2d9e851f3238e47}
+
+
+remove\-Tail function for deleting the tail element of \hyperlink{classLinkedList}{\-Linked\-List} 
+
+\-This function utilizes the tail member of the \-Linked \-List class to remove the tail from the list.
+
+\begin{DoxyReturn}{\-Returns}
+\-The value deleted from the list. 
+\end{DoxyReturn}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classLinkedList_a3b496be2ca8046e2a806f6e2eab33d9b}{\index{\-Linked\-List@{\-Linked\-List}!head@{head}}
+\index{head@{head}!LinkedList@{\-Linked\-List}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Linked\-List\-::head}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classLinkedList_a3b496be2ca8046e2a806f6e2eab33d9b}
+\hypertarget{classLinkedList_a0ee3b52ce8c1297315a78a59de6aba24}{\index{\-Linked\-List@{\-Linked\-List}!length@{length}}
+\index{length@{length}!LinkedList@{\-Linked\-List}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Linked\-List\-::length}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classLinkedList_a0ee3b52ce8c1297315a78a59de6aba24}
+\hypertarget{classLinkedList_a6ee7e26362fba74cdec9d4806ded2a21}{\index{\-Linked\-List@{\-Linked\-List}!tail@{tail}}
+\index{tail@{tail}!LinkedList@{\-Linked\-List}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Linked\-List\-::tail}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classLinkedList_a6ee7e26362fba74cdec9d4806ded2a21}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Linked\-List/include/\hyperlink{LinkedList_8hpp}{\-Linked\-List.\-hpp}\item 
+\-Linked\-List/src/\hyperlink{LinkedList_8cpp}{\-Linked\-List.\-cpp}\end{DoxyCompactItemize}
