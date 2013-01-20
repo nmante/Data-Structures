@@ -1,0 +1,123 @@
+\hypertarget{classQueue}{\section{\-Queue \-Class \-Reference}
+\label{classQueue}\index{\-Queue@{\-Queue}}
+}
+
+
+{\ttfamily \#include $<$\-Queue.\-hpp$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue_a7cfca3637d57c4a9e37351b3426ffd40}{\-Queue} ()
+\begin{DoxyCompactList}\small\item\em \-Default \hyperlink{classQueue}{\-Queue} \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classQueue_a00d119db8fa3050da37746e82cbcf94f}{$\sim$\-Queue} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classQueue}{\-Queue} \-Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{classQueue_a45558a88b89e85086730b64efa4557f6}{del} ()
+\begin{DoxyCompactList}\small\item\em \-Function for removing a single \hyperlink{classQueue}{\-Queue} node. \end{DoxyCompactList}\item 
+void \hyperlink{classQueue_aff0f91402056fb26b1e10cef82f37887}{add} (int)
+\begin{DoxyCompactList}\small\item\em add function for adding \hyperlink{classQueue}{\-Queue} variables \end{DoxyCompactList}\item 
+void \hyperlink{classQueue_a3e0d42ab9a74d1c915fea58e4067e385}{display} ()
+\begin{DoxyCompactList}\small\item\em \-A function to display the contents of the \hyperlink{classQueue}{\-Queue}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{\-Node} $\ast$ \hyperlink{classQueue_a36ab375d24d41bcc1d598c132700835b}{front}
+\item 
+\hyperlink{classNode}{\-Node} $\ast$ \hyperlink{classQueue_a9e7cf4e1319b62764653fdc67b649dd3}{rear}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classQueue_a7cfca3637d57c4a9e37351b3426ffd40}{\index{\-Queue@{\-Queue}!\-Queue@{\-Queue}}
+\index{\-Queue@{\-Queue}!Queue@{\-Queue}}
+\subsubsection[{\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-::\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQueue_a7cfca3637d57c4a9e37351b3426ffd40}
+
+
+\-Default \hyperlink{classQueue}{\-Queue} \-Constructor. 
+
+\hypertarget{classQueue_a00d119db8fa3050da37746e82cbcf94f}{\index{\-Queue@{\-Queue}!$\sim$\-Queue@{$\sim$\-Queue}}
+\index{$\sim$\-Queue@{$\sim$\-Queue}!Queue@{\-Queue}}
+\subsubsection[{$\sim$\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Queue\-::$\sim$\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQueue_a00d119db8fa3050da37746e82cbcf94f}
+
+
+\hyperlink{classQueue}{\-Queue} \-Destructor. 
+
+\-Need to remove each element one by one. \-There are two pointers maintained, the front \hyperlink{classNode}{\-Node} and the rear \hyperlink{classNode}{\-Node}. \-Must delete from front variable, while keeping track of next node so that we don't lose our \hyperlink{classQueue}{\-Queue}. \-This can be done by calling our del function in a while loop.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{classQueue_a45558a88b89e85086730b64efa4557f6}{\-Queue\-::del()} 
+\end{DoxySeeAlso}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classQueue_aff0f91402056fb26b1e10cef82f37887}{\index{\-Queue@{\-Queue}!add@{add}}
+\index{add@{add}!Queue@{\-Queue}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Queue\-::add} (
+\begin{DoxyParamCaption}
+\item[{int}]{init\-Data}
+\end{DoxyParamCaption}
+)}}\label{classQueue_aff0f91402056fb26b1e10cef82f37887}
+
+
+add function for adding \hyperlink{classQueue}{\-Queue} variables 
+
+\-The add function adds a new \hyperlink{classQueue}{\-Queue} node to the top of the \hyperlink{classQueue}{\-Queue}.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em data} & \-Data to be added to front of \hyperlink{classQueue}{\-Queue}. \-This data is wrapped by a \hyperlink{classNode}{\-Node}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-To avoid \-Memory \-Allocation issues, if allocation fails (i.\-e. overflow) \hyperlink{classQueue_aff0f91402056fb26b1e10cef82f37887}{\-Queue\-::add()} is returned from immediately. 
+\end{DoxyNote}
+\hypertarget{classQueue_a45558a88b89e85086730b64efa4557f6}{\index{\-Queue@{\-Queue}!del@{del}}
+\index{del@{del}!Queue@{\-Queue}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Queue\-::del} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQueue_a45558a88b89e85086730b64efa4557f6}
+
+
+\-Function for removing a single \hyperlink{classQueue}{\-Queue} node. 
+
+\-The \hyperlink{classQueue_a45558a88b89e85086730b64efa4557f6}{\-Queue\-::del()} function removes the least recently added node on the \hyperlink{classQueue}{\-Queue}. \-It also simultaneously updates the pointer to the front and rear of the \hyperlink{classQueue}{\-Queue}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The data from the removed node. 
+\end{DoxyReturn}
+\hypertarget{classQueue_a3e0d42ab9a74d1c915fea58e4067e385}{\index{\-Queue@{\-Queue}!display@{display}}
+\index{display@{display}!Queue@{\-Queue}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Queue\-::display} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classQueue_a3e0d42ab9a74d1c915fea58e4067e385}
+
+
+\-A function to display the contents of the \hyperlink{classQueue}{\-Queue}. 
+
+\-This function iterates over and prints each node in the \hyperlink{classQueue}{\-Queue}. \-The first node printed is the top \hyperlink{classNode}{\-Node}. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classQueue_a36ab375d24d41bcc1d598c132700835b}{\index{\-Queue@{\-Queue}!front@{front}}
+\index{front@{front}!Queue@{\-Queue}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Queue\-::front}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classQueue_a36ab375d24d41bcc1d598c132700835b}
+\hypertarget{classQueue_a9e7cf4e1319b62764653fdc67b649dd3}{\index{\-Queue@{\-Queue}!rear@{rear}}
+\index{rear@{rear}!Queue@{\-Queue}}
+\subsubsection[{rear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Queue\-::rear}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classQueue_a9e7cf4e1319b62764653fdc67b649dd3}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Queue/include/\hyperlink{Queue_8hpp}{\-Queue.\-hpp}\item 
+\-Queue/src/\hyperlink{Queue_8cpp}{\-Queue.\-cpp}\end{DoxyCompactItemize}
