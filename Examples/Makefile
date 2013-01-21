@@ -7,7 +7,6 @@ INC_DIRS=-I../Node/include -I../Stack/include -I../Queue/include \
 EXE=DSExample
 OBJS=main.o TestSuite.o
 
-# 
 
 $(EXE): $(OBJS)
 	$(CC) $(OBJS) $(LINK_DIRS) $(LINK_FLAGS) -o $(EXE) 
