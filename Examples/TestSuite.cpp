@@ -127,6 +127,18 @@ void QueueTest()
 void BinarySearchTest()
 {
 	BinarySearchTree a;
+	BinarySearchTree *b;
+	a.insert(4);
+	a.insert(2);
+	a.insert(5);
+	a.insert(1);
+	a.insert(3);
+	
+
+	a.postOrderPrint();
+	a.preOrderPrint();
+	a.inOrderPrint();
+
 }
 
 void LinkedListTest()
