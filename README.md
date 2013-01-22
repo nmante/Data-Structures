@@ -10,7 +10,7 @@ Once you've cloned the repository or downloaded the zip file to your machine,
 go to your terminal and go to the top directory of this library. Run 'make' at the
 command line. For beginners, this is how your command line would look
 
-	<b>computer_name:Data-Structures user_name$ make</b>
+	computer_name:Data-Structures user_name$ make
 
 Once you have run the 'make' command, you will have made the object/shared object files
 and you will have all of the example programs so that you can see how to use the
@@ -45,3 +45,7 @@ TestSuite.cpp shows how to invoke the commands for each data structure.
 
 If you want to run the code from the aforementioned files, then you can invoke the executable
 'DSExample' from the commandline.  'DSExample' was compiled from the TestSuite and main.cpp files.
+
+	computer_name:Examples user_name$ ./DSExample
+
+
