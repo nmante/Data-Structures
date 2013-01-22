@@ -22,9 +22,9 @@ For windows users, you have 2 options:
 
 ####Option 1
 Get a Unix like environment
-1. Either a virtual machine
-2. Cygwin
-3. MinGW
+	1. Either a virtual machine
+	2. Cygwin
+	3. MinGW
 Then run 'make' from the command line in the terminal of those environments.
 
 ####Option 2
