@@ -7,12 +7,12 @@ LINK_DIR=../Node/bin/
 all: BinarySearch.o BinarySearch.so
 
 BinarySearch.so: $(INC_DIR)*.hpp $(SOURCE)*.cpp
-	$(CC) -shared -o libbinarysearch.so BinarySearch.o
+	$(CC) -shared -o libbinarysearch.so -L$(LINK_DIR) -lnode BinarySearch.o
 	rm *.o
 	mv libbinarysearch.so bin
 
 BinarySearch.o: $(INC_DIR)*.hpp $(SOURCE)BinarySearch.cpp
-	$(CC) $(INC_FLAGS) -c -g -fPIC -L$(LINK_DIR) -lnode $(SOURCE)BinarySearch.cpp
+	$(CC) $(INC_FLAGS) -c -g -fPIC $(SOURCE)BinarySearch.cpp
 
 # BinaryNode.o: $(INC_DIR)BinaryNode.hpp $(SOURCE)BinaryNode.cpp
 # 	$(CC) $(INC_FLAGS) -c -fPIC -L$(LINK_DIR) -lnode $(SOURCE)BinaryNode.cpp	

@@ -6,16 +6,17 @@ LINK_DIR=../Node/bin/
 
 all: Queue.o Queue.so
 
-Queue.so: $(INC_DIR)Queue.hpp $(SOURCE)Queue.cpp
-	$(CC) -shared -o libqueue.so Queue.o
+# $(LINK_DIR)Node.o
+Queue.so: Queue.o
+	$(CC) -shared -o libqueue.so -L$(LINK_DIR) -lnode  Queue.o
 	rm Queue.o
 	mv libqueue.so bin
 
 
 
 
-Queue.o:
-	$(CC) $(INC_FLAGS) -c -g -fPIC -L$(LINK_DIR) -lnode $(SOURCE)Queue.cpp
+Queue.o: $(INC_DIR)Queue.hpp ../Node/include/Node.hpp $(SOURCE)Queue.cpp
+	$(CC) $(INC_FLAGS) -c -g -fPIC $(SOURCE)Queue.cpp
 
 clean:
 	rm bin/libqueue.so

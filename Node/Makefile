@@ -2,7 +2,7 @@ CC=g++
 INC_DIR=include/
 SOURCE=src/
 
-all: Node.o Node.a
+all: Node.o Node.so
 
 Node.a:
 	ar rcs libnode.a Node.o 
@@ -20,3 +20,4 @@ Node.o: $(INC_DIR)Node.hpp $(SOURCE)Node.cpp
 
 clean:
 	rm bin/libnode.so
+	rm bin/libnode.a
