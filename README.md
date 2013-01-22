@@ -21,10 +21,10 @@ recursively calls the Makefiles in the child directories (e.g. DataStructures/St
 For windows users, you have 2 options:
 
 ####Option 1
-Get a Unix like environment:
--Either a virtual machine
--Cygwin
--MinGW
+Get a Unix like environment
+1. Either a virtual machine
+2. Cygwin
+3. MinGW
 Then run 'make' from the command line in the terminal of those environments.
 
 ####Option 2
