@@ -21,14 +21,11 @@ recursively calls the Makefiles in the child directories (e.g. DataStructures/St
 For windows users, you have 2 options:
 
 ####Option 1
-Get a Unix like environment
-	1. Either a virtual machine
-	2. Cygwin
-	3. MinGW
+Get a Unix like environment: Either a virtual machine, Cygwin, MinGW, etc.
 Then run 'make' from the command line in the terminal of those environments.
 
 ####Option 2
-Add the files to your Visual Studio project.
+Add the files to your Visual Studio project, or whatever IDE you use.
 
 ###Use data structures in your own code
 If you want to use the data structures in your own code, then you can simply ignore the 
