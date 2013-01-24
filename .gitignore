@@ -3,4 +3,9 @@ bin
 *~
 target/
 html/
+<<<<<<< HEAD
 DSOxy
+=======
+.o
+.so
+>>>>>>> 513d0e4509d8b3bbaa7962838a5720ef9f43f513
