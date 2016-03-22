@@ -35,13 +35,13 @@ BinaryNode.hpp included in your project as well.
 
 ##Use cases
 Note: Run the 'make' command from the command line before looking at this section if you want
-to run the 'DSExample' executable.
-
+to run the 'DSExample' executable.  
+ 
 Go to the DataStructures/Examples folder and open up the main.cpp and TestSuite.cpp files.
 TestSuite.cpp shows how to invoke the commands for each data structure.
 
 If you want to run the code from the aforementioned files, then you can invoke the executable
-'DSExample' from the commandline.  'DSExample' was compiled from the TestSuite and main.cpp files.
+'DSExample' from the commandline.  'DSExample' was compiled from the TestSuite and main.cpp files. Additionally, the makefile in the `Examples` folder links all of the static libraries (stack, queue, etc.) to the `DSExample` example program.
 
 	computer_name:Examples user_name$ ./DSExample
 

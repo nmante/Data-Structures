@@ -10,7 +10,7 @@ DIRS=Node Queue Stack BinarySearch LinkedList Examples
 
 all:
 	for d in $(DIRS); do \
-	cd $$d; make; cd ..; \
+	cd $$d; mkdir -p bin; make; cd ..; \
 	done
 
 clean:

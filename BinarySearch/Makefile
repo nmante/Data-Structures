@@ -4,11 +4,15 @@ INC_FLAGS=-Iinclude/ -I../Node/include/
 SOURCE=src/
 LINK_DIR=../Node/bin/
 
-all: BinarySearch.o BinarySearch.so
+all: BinarySearch.o BinarySearch.so BinarySearch.a
+
+BinarySearch.a: BinarySearch.o
+	ar rvs libbinarysearch.a BinarySearch.o
+	mv libbinarysearch.a bin
+
 
 BinarySearch.so: $(INC_DIR)*.hpp $(SOURCE)*.cpp
 	$(CC) -shared -o libbinarysearch.so -L$(LINK_DIR) -lnode BinarySearch.o
-	rm *.o
 	mv libbinarysearch.so bin
 
 BinarySearch.o: $(INC_DIR)*.hpp $(SOURCE)BinarySearch.cpp
@@ -18,4 +22,5 @@ BinarySearch.o: $(INC_DIR)*.hpp $(SOURCE)BinarySearch.cpp
 # 	$(CC) $(INC_FLAGS) -c -fPIC -L$(LINK_DIR) -lnode $(SOURCE)BinaryNode.cpp	
 
 clean:
-	rm bin/libbinarysearch.so
+	rm bin/libbinarysearch.*
+	rm *.o
